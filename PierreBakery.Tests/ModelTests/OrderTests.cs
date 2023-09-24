@@ -10,10 +10,19 @@ namespace PierreBakery.Tests
   {
 
     [TestMethod]
-    public void VendorConstructor_CreatesInstanceOfOrder_Order()
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order ("Dry Goods", "Flour", "24th", 1);
+      Order newOrder = new Order ("Dry Goods", "Flour", "2024-09-24", 10);
         Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
+      [TestMethod]
+    public void OrderConstructor_SetsPropertiesCorrectly_Order()
+    {
+      Order newOrder = new Order ("Dry Goods", "Flour", "2024-09-24", 10);
+      Assert.AreEqual("Dry Goods", newOrder.Title);
+      Assert.AreEqual("Flour", newOrder.Description);
+      Assert.AreEqual("2024-09-24", newOrder.Date);
+      Assert.AreEqual(10, newOrder.Price);
     }
   }
 }
