@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace PierreBakery.Controllers
 {
-  public class BakeryController : Controller
+  public class VendorsController : Controller
   {
     private static List<Vendor> allItems = new List<Vendor> {};
 
-    public BakeryController()
+    public VendorsController()
     {
       allItems = new List<Vendor>();
     }

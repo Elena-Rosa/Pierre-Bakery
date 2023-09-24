@@ -21,10 +21,9 @@ namespace PierreBakery
 
           name: "Vendors",
           pattern: "vendors",
-          defaults new { controller = "Vendors", action = "Index" }
-          
+          defaults: new { controller = "Vendors", action = "Index" }
       );
-
+      });
       app.Run();
     }
   }
