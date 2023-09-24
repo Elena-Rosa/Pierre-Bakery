@@ -15,9 +15,14 @@ namespace PierreBakery
       app.UseStaticFiles();
       app.UseRouting();
 
-      app.MapControllerRoute(
-          name: "default",
-          pattern: "{controller=Home}/{action=Index}/{id?}"
+      app.UseEndpoints(endpoints =>
+      {
+        endpoints.MapControllerRoute(
+
+          name: "Vendors",
+          pattern: "vendors",
+          defaults new { controller = "Vendors", action = "Index" }
+          
       );
 
       app.Run();

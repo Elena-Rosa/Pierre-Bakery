@@ -6,7 +6,13 @@ namespace PierreBakery.Controllers
 {
   public class BakeryController : Controller
   {
-     List<Vendor> allItems;
+    private static List<Vendor> allItems = new List<Vendor> {};
+
+    public BakeryController()
+    {
+      allItems = new List<Vendor>();
+    }
+
     [HttpGet("/vendors")]
     public ActionResult Index()
     {
