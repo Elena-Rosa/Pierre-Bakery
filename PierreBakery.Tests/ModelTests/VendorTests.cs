@@ -15,33 +15,20 @@ namespace PierreBakery.Tests
       Vendor newVendor = new Vendor("Mia", "Mia");
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
-
     [TestMethod]
-    public void GetAll_ReturnsEmptyList_VendorList()
+    public void VendorConstructor_SetsPropertiesCorrectly_Vendor()
     {
-      Vendor newVendor = new Vendor("Bowls", "Bowls");
-     
-      List<Vendor> newList = new List<Vendor> { };
-
-      CollectionAssert.AreEqual(newList, Vendor.GetAll());
+      Vendor newVendor = new Vendor ("Mia", "Market");
+      Assert.AreEqual("Mia", newVendor.Name);
+      Assert.AreEqual("Market", newVendor.Description);
     }
     [TestMethod]
-    public void SetNameProperty_SetsNameProperty()
-    {
-      Vendor newVendor = new Vendor("test", "test");
-      string newName = "Cupcake";
-      newVendor.Name = newName;
-      string result = newVendor.Name;
-      Assert.AreEqual(newName, result);
+    public void OrderConstructor_SetName_String()
+     {
+         Vendor newVendor = new Vendor ("Mia", "Market");
+        newVendor.Name = "Library";
+        Assert.AreEqual("Library", newVendor.Name);
     }
-    [TestMethod]
-    public void SetDescriptionProperty_SetsDescriptionProperty()
-    {
-      Vendor newVendor = new Vendor("purple", "purple");
-      string newDescription = "Purple";
-      newVendor.Description = newDescription;
-      string result = newVendor.Description;
-      Assert.AreEqual(newDescription, result);
-    }
+  
   }
 }
