@@ -1,4 +1,8 @@
 
+@{
+  Layout = "_Layout";
+}
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -17,18 +21,16 @@
 
 @if (Model.Count == 0)
 {
-  <p>There are no items in the list.</p>
+  <h3>No vendors have been added yet!</h3>
 }
 <ul>
   @foreach (Vendor vendor in Model)
   {
-    <li>@vendor.Name</li>
+    <h3><a href='/vendors/@vendor.Id'>@vendor.Name</a></h3>
   }
 </ul>
-     <a href="/vendor/new">Add a new vendor</a>
+     <a href="/vendors/new">Add a new vendor</a>
 
-    <form action="/vendor/delete" method="post">
-      <button type="submit" name="button">Clear All Items</button>
-    </form>
+    <p><a href='/'>Back home</a></p>
   </body>
 </html>

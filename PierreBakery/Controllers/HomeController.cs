@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace PierreBakery.Controllers
+namespace ToDoList.Controllers
 {
     public class HomeController : Controller
     {
@@ -10,5 +10,6 @@ namespace PierreBakery.Controllers
       {
         return View();
       }
+
     }
 }

@@ -5,12 +5,15 @@
 ## Technologies Used
 
 * _C#_
-* _.NET_
+* _HTML_
+* _ASP.NET Core MVC framework_
+* _NET6.0_
+
 
 
 ## Description
 
-This application allows Pierre to track orders from vendors that purchased baked goods from him. 
+This application allows the user to track orders by inputing orders and vendors that purchased baked goods. Application will track Name and description of vendor and various properties of the order. 
 
 ## Setup/Installation requirements
 
