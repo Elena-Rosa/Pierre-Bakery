@@ -24,6 +24,20 @@ namespace PierreBakery.Tests
       Assert.AreEqual("2024-09-24", newOrder.Date);
       Assert.AreEqual(10, newOrder.Price);
     }
+    [TestMethod]
+    public void OrderConstructor_SetTitle_String()
+     {
+         Order newOrder = new Order ("Dry Goods", "Flour", "2024-09-24", 10);
+        newOrder.Title = "Yeast";
+        Assert.AreEqual("Yeast", newOrder.Title);
+    }
+    [TestMethod]
+    public void OrderPrice_SetPrice_6()
+     {
+         Order newOrder = new Order ("Dry Goods", "Flour", "2024-09-24", 10);
+        newOrder.Price = 6;
+        Assert.AreEqual(6, newOrder.Price);
+    }
   }
 }
 
