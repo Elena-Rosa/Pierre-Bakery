@@ -25,10 +25,21 @@ namespace PierreBakery.Tests
     [TestMethod]
     public void OrderConstructor_SetName_String()
      {
-         Vendor newVendor = new Vendor ("Mia", "Market");
+        Vendor newVendor = new Vendor ("Mia", "Market");
         newVendor.Name = "Library";
         Assert.AreEqual("Library", newVendor.Name);
     }
-  
+    
+    [TestMethod]
+    public void GetAll_ReturnsList_VendorList()
+    {
+     Vendor newVendor = new Vendor ("Mia", "Market");
+     
+      List<Vendor> newList = new List<Vendor> { };
+      newList.Add(newVendor);
+
+
+      Assert.AreEqual(4, Vendor.GetAll().Count);
+    }
   }
 }
