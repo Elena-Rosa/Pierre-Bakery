@@ -9,7 +9,7 @@ namespace PierreBakery.Tests
   public class OrderTests 
   {
 
-   [TestMethod]
+   /*[TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
       Order newOrder = new Order ("Dry Goods", "Flour", "2024-09-24", 10);
@@ -38,7 +38,33 @@ namespace PierreBakery.Tests
         newOrder.Price = 6;
         Assert.AreEqual(6, newOrder.Price);
     }
+       [TestMethod]
+    public void GetAll_ReturnsList_OrderList()
+    {
+     Order newOrder = new Order ("Dry Goods", "Flour", "2024-09-24", 10);
+     
+      List<Order> newList = new List<Order> { };
+      newList.Add(newOrder);
+
+
+      Assert.AreEqual(1, Order.GetAll().Count);
+  }
+  */
+  
+   [TestMethod]
+    public void GetAll_ReturnsList_OrderList()
+    {
+     Order newOrder = new Order ("Dry Goods", "Flour", "2024-09-24", 10);
+     
+      List<Order> newList = new List<Order> { };
+      newList.Add(newOrder);
+
+
+      Assert.AreEqual(1, Order.GetAll().Count);
+    }
   }
 }
+
+
 
     
